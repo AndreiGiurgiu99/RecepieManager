@@ -1,3 +1,24 @@
-{% extends "base.html"%}
-{% block title%}Changed{%endblock%}
+{% extends "base.html"%} {% block title%}Changed{%endblock%} {% block content%}
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
 
+
+<div class="circle"></div>
+<div class="content">
+  <div class="textBox">
+    <h2>
+      The best cooking app designed in Cisnadie
+      <br /><span>It's Cockering</span>
+    </h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta alias sed,
+      hic nam aperiam nostrum cum accusamus quisquam, obcaecati quod illo velit
+      non aliquid vitae assumenda a autem omnis vero?
+    </p>
+    <a href={{url_for("views.AddRecipes")}}>View Recipes</a>
+  </div>
+  <div class="imgBox"><img src="/static/cupcake.png" class ="cupcake"</div>
+</div>
+
+{%endblock%}

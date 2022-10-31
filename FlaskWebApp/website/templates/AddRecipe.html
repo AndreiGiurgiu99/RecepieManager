@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% import "bootstrap/wtf.html" as wtf %} {% block
+styles %} {{ super() }}
+<style>
+  body {
+    background: #eaedf0;
+  }
+</style>
+{% endblock %} {% block title %} Recipe Database {% endblock %} {% block
+content%}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-lg-8 mx-lg-auto mx-md-auto">
+      {{ wtf.quick_form(form) }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
