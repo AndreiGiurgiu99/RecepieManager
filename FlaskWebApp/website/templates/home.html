@@ -1,4 +1,4 @@
-{% extends "base.html"%} {% block title%}Changed{%endblock%} {% block content%}
+{% extends "base.html"%}{% block content%}
 <head>
   <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
 </head>
@@ -12,13 +12,13 @@
       <br /><span>It's Cockering</span>
     </h2>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta alias sed,
-      hic nam aperiam nostrum cum accusamus quisquam, obcaecati quod illo velit
-      non aliquid vitae assumenda a autem omnis vero?
+      Save, edit or view your recipes. Cockering being the 
+      best app for easy cooking directions that helps you 
+      eat great food and enhances your cooking skills. Try it now! 
     </p>
     <a href={{url_for("views.AddRecipes")}}>View Recipes</a>
   </div>
-  <div class="imgBox"><img src="/static/cupcake.png" class ="cupcake"</div>
+  <div class="imgBox"><img src="/static/cooking.png" class ="pngimage"</div>
 </div>
 
 {%endblock%}
