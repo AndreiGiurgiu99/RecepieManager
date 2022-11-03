@@ -1,8 +1,6 @@
 from flask import Flask
-from os import path
 from flask_sqlalchemy import SQLAlchemy
 from flask_bootstrap import Bootstrap
-
 
 
 db = SQLAlchemy()
@@ -21,13 +19,14 @@ def create_app():
 
     from .views import views
     from .auth import auth
+    from .models import Recipe
 
+    
     app.register_blueprint(views, url_prefix='/')
     app.register_blueprint(auth, url_prefix='/')
 
-    from .models import Recipe
+    
 
-  
     with app.app_context():
         db.create_all()
 
