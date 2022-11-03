@@ -1,6 +1,6 @@
 {% extends "base.html"%}{% block content%}
 <head>
-  <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='/css/home.css') }}">
 </head>
 
 
@@ -18,7 +18,7 @@
     </p>
     <a href={{url_for("views.AddRecipes")}}>View Recipes</a>
   </div>
-  <div class="imgBox"><img src="/static/cooking.png" class ="pngimage"</div>
+  <div class="imgBox"><img src="/static/images/cooking.png" class ="pngimage"</div>
 </div>
 
 {%endblock%}

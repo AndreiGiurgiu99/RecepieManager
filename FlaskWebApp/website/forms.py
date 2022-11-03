@@ -18,7 +18,7 @@ class AddRecipe(FlaskForm):
                                 choices=["appetizer", "main", "dessert", "drinks", "soups / stews","snack"])
     diet =  SelectField('Select diets',
                                 choices=['low sugar','high protein','high carbs','gluten-free','vegetarian','vegan'])
-    recipe_ingredient = TextAreaField('Add ingredient|quantity|measurments')
+    recipe_ingredient = TextAreaField('Add ingredient/quantity/measurments')
     recipe_instructions = StringField('Add instructions')
 
     update = HiddenField()

@@ -6,12 +6,14 @@ from .models import *
 
 views = Blueprint('views', __name__) #same name as file
 
+
+#HOMEPAGE
 @views.route('/') #homepage decorator
 
 def home(): #it will run only on this page
     return render_template("home.html")
 
-
+#ADD RECIPE TO DATABASE PAGE
 @views.route('/addRecipe', methods=['GET','POST'])
 ##Form function to add
 def AddRecipes():
@@ -33,6 +35,6 @@ def AddRecipes():
 
         db.session.add(record)
         db.session.commit()
-
+    
     return render_template('AddRecipe.html',form=form, title= "Add recipe to database")
     
