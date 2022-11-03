@@ -5,6 +5,7 @@
   height: auto;
   margin-left: 100px;
 }
+
 .content {
   position: relative;
   width: 100%;
@@ -21,7 +22,7 @@
 }
 
 .content .textBox h2 span {
-  color:#e04b5a;
+  color:crimson;
   font-size: 1.2em;
   font-weight: 900;
   padding-top: 15px;
@@ -35,7 +36,7 @@
   display: inline-block;
   margin-top: 20px;
   padding: 8px 20px;
-  background: #e04b5a;
+  background: crimson;
   color: #fff;
   border-radius: 40px;
   font-weight: 500;
@@ -57,6 +58,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #e04b5a;
+  background-color: crimson;
   clip-path: circle(745px at right 900px);
 }
