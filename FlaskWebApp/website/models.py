@@ -7,7 +7,7 @@ from sqlalchemy.orm import declarative_base, relationship
 class Recipe(db.Model):
     __tablename__ = 'Recipes'
     recipe_id = db.Column(db.Integer, primary_key=True)
-    recipe_name = db.Column(db.Text, unique=True)
+    recipe_name = db.Column(db.Text, unique=False)
     recipe_notes = db.Column(db.Text, unique=False)
     difficulties_id = db.Column(db.Text, unique=False)
     cuisines_id = db.Column(db.Text, unique=False)
