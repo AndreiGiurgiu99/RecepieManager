@@ -1,0 +1,24 @@
+{% extends "base.html"%}{% block content%}
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='/css/home.css') }}">
+</head>
+
+
+<div class="circle"></div>
+<div class="content">
+  <div class="textBox">
+    <h2>
+      The best cooking app designed in Cisnadie
+      <br /><span>It's Cockering</span>
+    </h2>
+    <p>
+      Save, edit or view your recipes. Cockering being the 
+      best app for easy cooking directions that helps you 
+      eat great food and enhances your cooking skills. Try it now! 
+    </p>
+    <a href={{url_for("views.AddRecipes")}}>View Recipes</a>
+  </div>
+  <div class="imgBox"><img src="/static/images/htmlImages/cooking.png" class ="pngimage"</div>
+</div>
+
+{%endblock%}

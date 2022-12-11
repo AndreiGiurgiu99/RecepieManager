@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/main.css') }}">
+    
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+
+    <title>{% block title%}Cockering{%endblock%}</title>
+      <!-- Site icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/images/htmlImages/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/images/htmlImages/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/images/htmlImages/favicon-16x16.png">
+    <link rel="manifest" href="/static/images/htmlImages/site.webmanifest">
+    <link rel="mask-icon" href="/static/images/htmlImages/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+  </head>
+
+  <body>
+    <div class="navigation">
+        <ul>
+          <li class="navlist">
+            <a href="/">
+              <span class="icon">
+                <ion-icon name="home-outline"></ion-icon>
+              </span>
+              <span class="text">Home</span>
+            </a>
+          </li>
+          <li class="navlist">
+            <a href="/sign-up">
+              <span class="icon">
+                <ion-icon name="pizza-outline"></ion-icon>
+              </span>
+              <span class="text">Recipes</span>
+            </a>
+          </li>
+          <li class="navlist">
+            <a href={{url_for("views.AddRecipes")}}>
+              <span class="icon">
+                <ion-icon name="add-outline"></ion-icon>
+              </span>
+              <span class="text">Add</span>
+            </a>
+          </li>
+          <li class="navlist">
+            <a href="/home">
+              <span class="icon">
+                <ion-icon name="book-outline"></ion-icon>
+              </span>
+              <span class="text">About</span>
+            </a>
+           </li>
+           <li class="navlist">
+            <a href="/home">
+              <span class="icon">
+                <ion-icon name="person-outline"></ion-icon>
+              </span>
+              <span class="text">Profile</span>
+            </a>
+           </li>
+        </ul>
+    </div>
+
+    <div class="container">{% block content %} {% endblock %}</div>
+
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.js"></script>
+    {% block scripts %}{% endblock %}
+
+
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+   
+  </body>
+</html>
