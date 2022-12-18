@@ -4,3 +4,12 @@
 tbody {
     color: white;
 }
+
+.page-item.active .page-link {
+    border: 1px solid white;
+}
+.page-link {
+    color: white !important;
+    background-color: rgb(220, 20, 60,.7) !important;
+    
+}

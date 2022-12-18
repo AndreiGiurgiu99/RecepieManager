@@ -1,0 +1,47 @@
+{%extends "base.html"%}
+
+
+{%block content%}
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/recipeTemplate.css') }}">
+</head>
+<div class="container flex flex--center">
+	<section class="card card--left flex flex--column">
+		<figure class="card--left_figure">
+			<img src={{ recipeimage}}>
+		</figure>
+		<h1>{{recipedata.recipe_name}}</h1>
+	</section>
+	<section class="card card--right">
+		<div class="grid">
+			<div class="header flex">
+				<h2>{{recipedata.recipe_name}}</h2>
+				<!-- <div><button onClick="window.print()">Print this page -->
+				<!-- </button></div> -->
+			</div>
+			<div class="ing--grid flex">
+				<h2>Ingredients</h2>
+				<ul class="ingredients">
+					<!-- Lists every ingredient on a new line -->
+					{%for ingredient in  recipeingredients%}
+						<li>{{ingredient}}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="preparation flex">
+				<h2>Preparation</h2>
+				<ol class="instructions">
+					<!-- Puts every instruction on a new line and numbers the instructions starting from 1 -->
+				{% set ids = namespace(nrCrt=0) %}
+					{%for instruction in recipeinstructions%}
+					{% set ids.nrCrt = ids.nrCrt + 1 %}
+					<li><b>{{ids.nrCrt}}</b>{{". "}}{{instruction}}</li>
+					<br>
+					{% endfor %}
+					{{ids.items }}
+				</ol>
+			</div>
+		</div>
+	</section>
+</div>
+{%endblock%}

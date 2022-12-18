@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     
     <link rel="stylesheet" href="{{ url_for('static', filename='/css/main.css') }}">
-    
+    <script src="{{url_for('static', filename='somejavascriptfile.js')}}"></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -22,11 +22,11 @@
 
     <title>{% block title%}Cockering{%endblock%}</title>
       <!-- Site icon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
-    <link rel="manifest" href="/static/images/site.webmanifest">
-    <link rel="mask-icon" href="/static/images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/images/htmlImages/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/images/htmlImages/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/images/htmlImages/favicon-16x16.png">
+    <link rel="manifest" href="/static/images/htmlImages/site.webmanifest">
+    <link rel="mask-icon" href="/static/images/htmlImages/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     
@@ -36,7 +36,7 @@
   </head>
 
   <body>
-    <div class="navigation">
+    <div class="navigation" id="navbar">
         <ul>
           <li class="navlist">
             <a href="/">
@@ -47,7 +47,7 @@
             </a>
           </li>
           <li class="navlist">
-            <a href="/sign-up">
+            <a href={{url_for("views.GetData")}}>
               <span class="icon">
                 <ion-icon name="pizza-outline"></ion-icon>
               </span>

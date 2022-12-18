@@ -13,8 +13,9 @@ class Recipe(db.Model):
     cuisines_id = db.Column(db.Text, unique=False)
     courses_id = db.Column(db.Text, unique=False)
     diets_id = db.Column(db.Text, unique=False)
-    instructions_id = db.Column(db.Text, unique=False)
     ingredients_id = db.Column(db.Text, unique = False)
+    instructions_id = db.Column(db.Text, unique=False)
+    
     
 
     def __init__(self, recipe_name, recipe_notes, difficulties_id, cuisines_id, courses_id, diets_id, instructions_id, ingredients_id):
@@ -24,8 +25,9 @@ class Recipe(db.Model):
         self.cuisines_id = cuisines_id
         self.courses_id = courses_id
         self.diets_id = diets_id
-        self.instructions_id = instructions_id
         self.ingredients_id = ingredients_id
+        self.instructions_id = instructions_id
+        
 
 
 
