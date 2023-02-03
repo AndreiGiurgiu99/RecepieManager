@@ -28,6 +28,7 @@ p,
 ul,
 li,
 ol,
+h3,
 i {
 	margin: 0;
 	padding: 0;
@@ -110,7 +111,7 @@ ol {
 	justify-content: center;
 	padding-top: 30px;
 }
-.header h2 {
+.header h2,h3 {
 	font-size: 16px;
 	padding: 0.4em;
 	max-width: 300px;
@@ -162,3 +163,5 @@ ol {
 		margin-top: 30px;
 	}
 }
+
+

@@ -18,7 +18,7 @@ class AddRecipe(FlaskForm):
     cuisine = SelectField('Select cuisine',
                                 choices=['French','Italian','Greek','Romanian','Turkish','Lebanese','American','African','Mexican','Chinese','Thai','Japanese','Indian'])
     course = SelectField('Select course',
-                                choices=['Appetizer','Main','Sandwiches','Dessert','Soups/Stews','Bread','Pastry','Snack','Drinks'])
+                                choices=['Appetizer','Main','Sidedish','Sandwiches','Dessert','Soups/Stews','Bread','Pastry','Snack','Drinks'])
     diet =  SelectField('Select diets',
                                 choices=['No Diet','Low sugar','High protein','High carbs','Gluten-free','Vegetarian','Vegan'])
     recipe_ingredient = TextAreaField('Add ingredient/quantity/measurments')

@@ -14,6 +14,7 @@
               <th>Number</th>
               <th>Recipe name</th>
               <th>Cuisine</th>
+              <th>Course</th>
               <th>Diet</th>
               <th>Difficulty</th>
               <th>Actions</th>
@@ -31,15 +32,16 @@
               <td>{{ ids.nrCrt }}</td>
               <td><a href={{url_for("views.ShowRecipe", recipeid = recipe.recipe_name)}}>{{ recipe.recipe_name }}</a></td>
               <td>{{ recipe.cuisines_id }}</td>
+              <td>{{recipe.courses_id}}</td>
               <td>{{ recipe.diets_id }}</td>
               <td>{{ recipe.difficulties_id }}</td>
               
               <td>
                 <a href={{url_for("views.EditRow", editRecipe = recipe.recipe_name)}}>
-                  <button type="button">Update</button>
+                  <button class="buttonUpdate" type="button">Update</button>
                 </a>
                 <a href={{url_for("views.DeleteRow", deletedRecipe = recipe.recipe_name)}}>
-                    <button  type="button">Delete </button>
+                    <button  class ="buttonUpdate" type="button">Delete </button>
                 </a>
                   
               </td>

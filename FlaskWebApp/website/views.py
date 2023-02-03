@@ -36,7 +36,7 @@ def AddRecipes():
         ### Saves image in download folder /static/images/recipeImages ###
         form.recipe_image.data.save(f"FlaskWebApp/website/static/images/recipeImages/{recipe_name}.jpg")
         
-        record = Recipe(recipe_name,recipe_notes,difficulty,cuisine,course,diet,recipe_ingredient,recipe_instructions)
+        record = Recipe(recipe_name,recipe_notes,difficulty,cuisine,course,diet,recipe_instructions,recipe_ingredient)
 
         db.session.add(record)
         db.session.commit()
@@ -53,7 +53,6 @@ def AddRecipes():
 def GetData():
     recipes = Recipe.query.all()
     return render_template('RecipeDatabase.html', recipes=recipes)
-
 
 ### Dynamic page creation for each recipe in the database ###
 @views.route('/Recipe/<recipeid>', methods = ['GET'])
@@ -118,3 +117,9 @@ def EditRow(editRecipe):
         return redirect('/RecipeDatabase')
 
     return render_template('EditRecipe.html', recipeToEdit = recipeToEdit, editRecipe=editRecipe, form=form)
+
+@views.route('/Categories', methods=['GET','POST'])
+
+def RecipeCategories():
+
+    return render_template('RecipeCategories.html')

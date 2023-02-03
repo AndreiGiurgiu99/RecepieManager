@@ -13,3 +13,15 @@ tbody {
     background-color: rgb(220, 20, 60,.7) !important;
     
 }
+
+a{
+    color:white;
+}
+
+a:hover {
+    color:white;
+}
+
+.buttonUpdate:hover{
+    color:crimson;
+}
